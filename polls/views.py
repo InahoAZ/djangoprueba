@@ -7,4 +7,4 @@ def index(request):
 	return HttpResponse("Hello, world. You're at the polls index.")
 
 def coso(request):
-	return HttpResponse("Hola ")
+	return HttpResponse("Hola Evelina ")
