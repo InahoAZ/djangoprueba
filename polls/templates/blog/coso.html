@@ -1,21 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Cosito</title>
-</head>
-<body>
-        <div>
-            <h1><a href="/">Django Girls Blog</a></h1>
-        </div>
-        <div>
-        {% for q in query %}
-        <p>{{ q.pub_date }}</p>
-        <h1> <a href="">{{ q.question_text }}</a></h1>
-        
+{% extends 'blog/base.html' %}
+{% block content%}
+{% for q in query %}
+<div class="post">
+    <div class="date"><p>{{ q.pub_date }}</p></div>
+    <h1> <a href="{% url 'post_detail' pk=q.pk %}">{{ q.question_text }}</a></h1>
 
-        {% endfor %}
+</div>
+{% endfor %}
+{% endblock %}
 
-        </div>
-    </body>
-</html>
