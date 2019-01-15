@@ -18,3 +18,12 @@ class Choice(models.Model):
 
     def __str__(self):
         return self.choice_text
+
+
+class Post(models.Model):
+    title = models.CharField(max_length=200)
+    post_text = models.TextField()
+    pub_date = models.DateTimeField('date published')
+
+    def __str__(self):
+    	return self.title

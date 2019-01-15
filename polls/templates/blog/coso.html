@@ -3,7 +3,7 @@
 {% for q in query %}
 <div class="post">
     <div class="date"><p>{{ q.pub_date }}</p></div>
-    <h1> <a href="{% url 'post_detail' pk=q.pk %}">{{ q.question_text }}</a></h1>
+    <h1> <a href="{% url 'post_detail' pk=q.pk %}">{{ q.title }}</a></h1>
 
 </div>
 {% endfor %}
