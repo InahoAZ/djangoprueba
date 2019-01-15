@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Question
 # Create your views here.
 
 
@@ -7,4 +8,5 @@ def index(request):
 	return HttpResponse("Hello, world. You're at the polls index.")
 
 def coso(request):
-	return render(request, 'blog/coso.html')
+	query = Question.objects.all()
+	return render(request, 'blog/coso.html',{'query': query})
